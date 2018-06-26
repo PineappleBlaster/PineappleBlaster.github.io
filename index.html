@@ -1,0 +1,100 @@
+<html> 
+<head>
+	<script>
+		function Onclicked(){
+			var returnedtext = confirm("Do you really want to visit this site?");
+			return returnedtext;
+		}
+function answer(){ 
+var radio = document.getElementsByName("trivia"); 
+var selection = false; 
+var message = ""; 
+
+for( var i = 0; i < radio.length; i++) { 
+if(radio[i].value == "kcr" && radio[i].checked == true) { 
+selection = true; 
+} //end if statement 
+} //end for loop
+
+if(selection == true) {
+message = message + "<b><p style='color:green'>Way to go!</p></b>"; 
+} else { 
+message = message + "<b><p style='color:red'>Try again my friend.</p></b>"; 
+}
+document.getElementById("response").innerHTML = message;
+
+} //end function answer 
+	</script>
+<link type="text/css" rel="stylesheet" href="main.css" />
+<title> Html Learning </title> 
+</head> 
+<h1> Basketball </h1>
+<body> 
+	<a href = "https://www.w3schools.com/Html/" >
+	<header class = "Header" onclick = "Onclicked()">
+		<img id = "ImageSize" src = "https://images.freeimages.com/images/large-previews/335/red-and-gold-4-1322552.jpg" />
+		<br />
+		<br />
+		<p class = "ImageSize" > Look at me! </p>
+	</header>
+</a>
+	<nav>
+		<ul id = "navmenu" >
+			<il class = "navitem" > <a href = "HTML_Workspace.html"> Home </a> </il>
+			<il class = "navitem"> <a href = "HTML_Workspace.html"> Games </a> </il>
+			<il class = "navitem"> <a href = "HTML_Workspace.html" > Gallery </a> </il>
+		</ul>
+	</nav>
+	<br /> <br />
+	<div id = "LeftSide" >
+	<p class = "CF" > Cool Font </p>
+	<br />
+	<ol>
+		<il class = "CF" > Hi </il>
+		<br />
+		<il class = "CF" > Welcome </il>
+		<br />
+		<il class = "CF" > Basketball </il>
+	</ol>
+<p id = "Margin" >
+Basketball nowadays, is a well-known sport that consists of dribbling a ball and shooting it towards a hoop to gain points. This sport originated from <u> <i> James Naismith, </i> </u> the creator of baseketball, in 1891. Comparing current basketball to when James Naismith first created basketball, we can conclude that they were both different and similar. For example, James Naismith first didn't add strings for the net, but instead used a bucket to act as the net. In order for the players to get back the basketball from the net, they would have to climb a ladder and physically remove it from the bucket themselves.
+</p>
+<ol>
+<il> 1) Basketball is a very fun and competitive sport. </il>
+<br />
+<il> 2) Basketball has introduced many elements that create sports today. </il>
+<br />
+<il class = "Span" > 3) Basketball is played all over the world. </il>
+</ol>
+<div class = "TriviaWrap" >
+<h2> Basketball Trivia Question </h2> <br />
+<p class = "PF" id > What is different about today's basketball to 1891's basketball? <form> 
+<div id = "response"> </div>
+ <input type = "radio" name = "trivia" value = "Dribbling wasn't part of 1891's basketball."> Dribbling wasn't part of 1891's basketball. 
+ <br /> 
+ <input type = "radio" name = "trivia" value = "You didn't shoot to score in 1891's basketball."> You didn't shoot to score in 1891's basketball. 
+ <br /> 
+ <input type = "radio" name = "trivia" value = "kcr"> They used buckets for the net in 1891's basketball. 
+ <br /> 
+ <input type = "radio" name = "trivia" value = "You didn't wear shoes to play basketball in 1891." > You didn't wear shoes to play basketball in 1891. 
+ <br /> <br /> 
+ <input id = "FirstId" type = "button" value = "Enter" onclick = "answer()"> </form> </p> </div>
+</div>
+<div id = "RightSide" >
+<img width = "100" src = "https://s7d2.scene7.com/is/image/dkscdn/16SPLWCRSSCRT2852BKB_is" /> , <img width = "100" src = "http://www.legacy.com/UserContent/ns/Photos/James%20Naismith%20square.jpg" />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YYUy4pF2eto" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<audio width = "420" height = "520" controls autoplay>
+	<source src = "http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg" >
+</audio>
+<p id = "Test" > Test Text </p>
+</div>
+<div class = "clearfloat" > </div>
+<center>
+<p style = "color: blue" > Tony Castillo </p>  <a href = "https://simplycodingcourses.com" > My Favorite Website </a>
+</center>
+<br />
+<footer class = "Header" >
+	<p id = "Title" > Tony Castillo created this Website </p>
+</footer>
+</body> 
+</html>
